@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "caculate", "caculate\caculate.csproj", "{84146187-E991-4EF0-A763-3EEBB733A742}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84146187-E991-4EF0-A763-3EEBB733A742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84146187-E991-4EF0-A763-3EEBB733A742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84146187-E991-4EF0-A763-3EEBB733A742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84146187-E991-4EF0-A763-3EEBB733A742}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E564361-DAEF-45ED-9A90-95568131F9BA}
+	EndGlobalSection
+EndGlobal

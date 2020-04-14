@@ -181,6 +181,7 @@ namespace caculate
 			this.BackgroundImage= global::caculate.Properties.Resources.bg;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Icon =  global::caculate.Properties.Resources.icon;
 			for (int count = 0; count < 12; count++)
 			{
 				this.Controls.Add(this.num[count]);

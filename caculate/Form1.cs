@@ -39,14 +39,21 @@ namespace caculate
 			{
 				bottom = i;
 				i = front;
-				exp[i] = cal_background.num_change(exp, front, bottom).ToString();
-				result =cal_background.Cal(exp,front,bottom);
+				if (bottom==0)
+				{
+					return;
+				}
+
+				exp[bottom] = "#";
+				result =cal_background.Cal(exp, front, bottom);
 				output.Text = result.ToString();
 				temp = null;
 				for (; i >= 0; i--)
 				{
 					exp[i] = " ";
 				}
+				bottom = 0;
+				front = 0;
 				i=0;
 			}
 		}
@@ -60,7 +67,8 @@ namespace caculate
 				{
 					exp[i] = " ";
 				}
-				i=0;
+
+				i = 0;
 			}
 			else if ("back" == btn.Text)
 			{
@@ -75,38 +83,32 @@ namespace caculate
 			else
 			{
 				bottom = i;
-				i = front;
-				exp[i] = cal_background.num_change(exp, front, bottom).ToString();
-				i++;
-				front = i;
-				exp[i] = cal_background.sign_change(btn.Text);
+				//exp[i] = cal_background.sign_change(btn.Text);
+				exp[i] = btn.Text;
 				temp = temp + exp[i];
+				i++;
+				//front = i;
 			}
 			display.Text = temp;
 		}
 		private void tri_click(object sender, EventArgs e)
 		{
 			Button btn = (sender as Button);
-			bottom = i;
-			i = front;
-			exp[i] = cal_background.num_change(exp, front, bottom).ToString();
+			exp[i] = btn.Text.Substring(0,3);
+			temp = temp + exp[i];
 			i++;
-			front = i;
-			exp[i] = cal_background.sign_change(btn.Text);
+			exp[i] = "(";
 			temp = temp + exp[i];
 			display.Text = temp;
+			i++;
 		}
 		private void sign_click(object sender, EventArgs e)
 		{
 			Button btn = (sender as Button);
-			bottom = i;
-			i = front;
-			exp[i] = cal_background.num_change(exp, front, bottom).ToString();
-			i++;
-			front = i;
-			exp[i] = cal_background.sign_change(btn.Text);
+			exp[i] = btn.Text;
 			temp = temp + exp[i];
 			display.Text = temp;
+			i++;
 		}
 	}
 }
